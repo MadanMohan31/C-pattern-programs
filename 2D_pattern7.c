@@ -17,34 +17,22 @@ int main()
 
     */
 
-    int row,position;
-    scanf("%d",&row);
-
-    for(position=1;position<=row*row;position++)
+    int n;
+    scanf("%d",&n);
+    int i, j, k, l, star=1;
+    for(i=1;i<=n;i++)
     {
-        if(position%row!=0)
+        for(j=1;j<=n;j++)
         {
-            if(position>=1 && position<=row)
+            if(i==1 || i==n || j==1 || j==n)
             {
                 printf("*");
             }
-            else if(position%row==1 || position%row==0)
-            {
-                printf("*");
-            }
-            else if(position>row*row-row && position<=row*row)
-            {
-                printf("*");
-            }
-            else
-            {
+            else{
                 printf(" ");
             }
         }
-        else
-        {
-            printf("*\n");
-        }
+        printf("\n");
     }
 
     return 0;
